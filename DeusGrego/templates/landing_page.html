@@ -1,4 +1,6 @@
+
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 
 <style>
@@ -111,7 +113,7 @@ main section{
 }
 .main-img img{
     width: 500px;
-    transform: rotate(-7deg);
+    transform: rotate(0deg);
 }
 .circle{
     position: absolute;
@@ -136,7 +138,7 @@ main section{
             
         </div>
         <div class="main-img" style="padding-left: 10%;">
-            <img src="/static/img/pythonmain.png" alt="Imagem do Python" id="python">
+            <img src="https://c.wallhere.com/photos/65/c2/exercising_Body_Art_Bodybuilder_bodybuilding_Men_in_Black_women_fitness_model_black_background-1932265.jpg!d" alt="Imagem do Python" id="python">
         </div>
     </section>
 </main>
@@ -145,36 +147,10 @@ main section{
 
 <div class="container">
     <div class="header" style="color: #006EFF; text-align: center;">NOSSA EQUIPE</div>
-    <div class="team" style="color: #fff;">
+    <div class="team justify-content-center" style="color: #fff;">
       <!-- Repita esta divisão para cada membro da equipe. -->
       <div class="member">
-        <img src="path-to-imagem-image.jpg" alt="Carlos Image">
-        <div class="name">Carlos</div>
-        <div>Front-end</div>
-      </div>
-      <!-- Outros membros da equipe adicionais. -->
-      <div class="member">
-        <img src="path-to-placeholder-image.jpg" alt="Placeholder Image">
-        <div class="name">Nome</div>
-        <div>Posição</div>
-      </div>
-      <div class="member">
-        <img src="path-to-placeholder-image.jpg" alt="Placeholder Image">
-        <div class="name">Nome</div>
-        <div>Posição</div>
-      </div>
-      <div class="member">
-        <img src="path-to-placeholder-image.jpg" alt="Placeholder Image">
-        <div class="name">Nome</div>
-        <div>Posição</div>
-      </div>
-      <div class="member">
-        <img src="path-to-placeholder-image.jpg" alt="Placeholder Image">
-        <div class="name">Nome</div>
-        <div>Posição</div>
-      </div>
-      <div class="member">
-        <img src="path-to-placeholder-image.jpg" alt="Placeholder Image">
+        <img src="{% static 'img/equipe.jpg' %}" alt="Placeholder Image">
         <div class="name">Nome</div>
         <div>Posição</div>
       </div>
