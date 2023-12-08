@@ -16,26 +16,40 @@
       font-weight: bold;
       margin: 20px 0;
     }
-    .team, .benefits {
+    .benefits {
       display: flex;
       justify-content: space-between;
       margin-bottom: 20px;
     }
+    .team{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
     .team {
+      align-items: center;
+    }
+    .benefit {
+      border: 1px solid #ffffff;
+      border-radius: 10px;
+      padding: 10px;
+      flex-basis: 20%;
+      display: flex;
+      flex-direction: column;
       align-items: center;
     }
     .member, .benefit {
       border: 1px solid #ffffff;
       border-radius: 10px;
       padding: 10px;
-      flex-basis: 18%;
+      flex-basis: 50%;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
     .member img, .benefit img {
-      width: 80%;
-      border-radius: 50%;
+      width: 100%;
+      border-radius: 0%;
       margin-bottom: 10px;
     }
     .name {
@@ -146,28 +160,28 @@ main section{
 <hr style="color: white;" width="1">
 
 <div class="container">
-    <div class="header" style="color: #006EFF; text-align: center;">NOSSA EQUIPE</div>
-    <div class="team justify-content-center" style="color: #fff;">
+    <div class="header justify-content-center align-items-center" style="color: #006EFF; text-align: center;">NOSSA EQUIPE</div>
+    <div class="team justify-content-center align-items-center" style="color: #fff; width: 600px; height: 500px; margin-left: 220px;">
       <!-- Repita esta divisão para cada membro da equipe. -->
-      <div class="member">
+      <div class="member justify-content-center align-items-center">
         <img src="{% static 'img/equipe.jpg' %}" alt="Placeholder Image">
-        <div class="name">Nome</div>
-        <div>Posição</div>
+        <div class="name">ADS</div>
+        <div>3º Periodo</div>
       </div>
     </div>
     <div class="header" style="text-align: center; color: #006EFF;">VANTAGENS</div>
     <div class="benefits">
       <div class="benefit">
-        <img src="path-to-personalized-support-image.jpg" alt="Personalizados Image">
-        <div>Acompanhamentos personalizados</div>
+        <img src="https://images.ctfassets.net/ea2tosc1qg3k/BR-6KK4CX6XjHML12CPCtRQXR/28d76a25c03417b90861a75e1b68868a/4-45_mob.jpg?w=600&q=50" width="500" height="300" alt="Personalizados Image">
+        <div style=" color: #1b7eff;">Treine em casa</div>
       </div>
       <div class="benefit">
-        <img src="path-to-comfort-of-your-home-image.jpg" alt="Comfort of Your Home Image">
-        <div>No conforto da sua casa</div>
+        <img src="https://grandeatleta.com.br/wp-content/uploads/2020/03/exercicios-circuito-em-casa-treino.jpg" width="500" height="300" alt="Comfort of Your Home Image">
+        <div style="color: #006EFF;">Personal Trainner Online</div>
       </div>
       <div class="benefit">
-        <img src="path-to-anytime-you-want-image.jpg" alt="Anytime You Want Image">
-        <div>Na hora que você quiser</div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1xnabQa7L6CrOj0hk4YRe8xMw10J0tn1EcQ&usqp=CAU" width="500" height="300" alt="Anytime You Want Image">
+        <div style="color: #006EFF;">Na hora que você quiser</div>
       </div>
     </div>
   </div>
