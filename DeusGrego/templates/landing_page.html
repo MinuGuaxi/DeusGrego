@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+    .landing {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .header {
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    .team, .benefits {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .team {
+      align-items: center;
+    }
+    .member, .benefit {
+      border: 1px solid #ffffff;
+      border-radius: 10px;
+      padding: 10px;
+      flex-basis: 18%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .member img, .benefit img {
+      width: 80%;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .name {
+      margin-top: 5px;
+    }
+
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+body{
+    background: #000000;
+    }
+
+/*Main*/
+
+main section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10rem 1rem;
+    
+    
+}
+
+.main-text img{
+    width: 13rem;
+    margin-bottom: 3vh;
+    
+    
+}
+.main-text h3{
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+.main-text p{
+    margin-bottom: 1.5rem;
+}
+.main-text h3,p{
+    color: white;
+}
+
+.main-text .btn{
+    padding: 10px 25px;
+    background: #000000;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+    border-color: #006EFF;
+}
+.main-text .btn:hover{
+    opacity: .85;
+}
+
+.main-text .content span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 1px 1px #888;
+    transition: all 0.5s;
+}
+.main-text .content span:hover{
+    opacity: .80;
+}
+
+.main-img{
+    transition: all 1s ease;
+    z-index: 100;
+}
+.main-img img{
+    width: 500px;
+    transform: rotate(-7deg);
+}
+.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fbff00;
+    clip-path: circle(100px at right 500px);
+}
+
+  </style>
+<body class="landing">
+  <main>
+    <section>
+        <!--<div class="circle"></div>-->
+        <div class="main-text">
+            <h1 style="color: #fff;">Não perca a chance de</h1>
+            <h3><span style="color: #006EFF; font-family: 'Philosopher', sans-serif;">INVESTIR</span> em <span style="color: #006EFF; font-family: 'Philosopher', sans-serif;">VOCÊ</span></h3>
+            <p>A musculação não precisa ser um bixo de 7 cabeças.<br> Criamos o Deus Grego para garantir que a saude e bem estar cheguem até vocẽ. <br>Estamos ansiosos para treinar com você!</p>
+            <a href="#" class="btn">Assine agora</a><a href="#secao-destino" style="color: #006EFF; padding-left: 20px;;">Saiba mais  ▶</a>
+            
+        </div>
+        <div class="main-img" style="padding-left: 10%;">
+            <img src="/static/img/pythonmain.png" alt="Imagem do Python" id="python">
+        </div>
+    </section>
+</main>
+
+<hr style="color: white;" width="1">
+
+<div class="container">
+    <div class="header" style="color: #006EFF; text-align: center;">NOSSA EQUIPE</div>
+    <div class="team" style="color: #fff;">
+      <!-- Repita esta divisão para cada membro da equipe. -->
+      <div class="member">
+        <img src="path-to-imagem-image.jpg" alt="Carlos Image">
+        <div class="name">Carlos</div>
+        <div>Front-end</div>
+      </div>
+      <!-- Outros membros da equipe adicionais. -->
+      <div class="member">
+        <img src="path-to-placeholder-image.jpg" alt="Placeholder Image">
+        <div class="name">Nome</div>
+        <div>Posição</div>
+      </div>
+      <div class="member">
+        <img src="path-to-placeholder-image.jpg" alt="Placeholder Image">
+        <div class="name">Nome</div>
+        <div>Posição</div>
+      </div>
+      <div class="member">
+        <img src="path-to-placeholder-image.jpg" alt="Placeholder Image">
+        <div class="name">Nome</div>
+        <div>Posição</div>
+      </div>
+      <div class="member">
+        <img src="path-to-placeholder-image.jpg" alt="Placeholder Image">
+        <div class="name">Nome</div>
+        <div>Posição</div>
+      </div>
+      <div class="member">
+        <img src="path-to-placeholder-image.jpg" alt="Placeholder Image">
+        <div class="name">Nome</div>
+        <div>Posição</div>
+      </div>
+    </div>
+    <div class="header" style="text-align: center; color: #006EFF;">VANTAGENS</div>
+    <div class="benefits">
+      <div class="benefit">
+        <img src="path-to-personalized-support-image.jpg" alt="Personalizados Image">
+        <div>Acompanhamentos personalizados</div>
+      </div>
+      <div class="benefit">
+        <img src="path-to-comfort-of-your-home-image.jpg" alt="Comfort of Your Home Image">
+        <div>No conforto da sua casa</div>
+      </div>
+      <div class="benefit">
+        <img src="path-to-anytime-you-want-image.jpg" alt="Anytime You Want Image">
+        <div>Na hora que você quiser</div>
+      </div>
+    </div>
+  </div>
+  </body>
+
+{% endblock %}

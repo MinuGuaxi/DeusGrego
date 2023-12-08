@@ -1,0 +1,231 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rodapé Personalizado</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .base {
+      font-family: Arial, sans-serif;
+      margin: 0;
+       /* Espaço para o rodapé */
+    }
+    
+    footer {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;;
+      color: white;
+      padding: 20px 0;
+    }
+    
+    .footer-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    
+    .footer-section ul li {
+      display: inline-block;
+      margin-right: 15px;
+    }
+    
+    .footer-section h5 {
+      text-transform: uppercase;
+      font-size: 16px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    
+    .footer-section ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+    
+    .footer-section ul li a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .social-icons {
+      text-align: center;
+    }
+    
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 20px;
+    }
+    
+    .divider {
+      height: 1px; /* Mais fina */
+      background-color: #666; /* Cor alterada para um cinza mais suave */
+      margin: 20px 5%; /* Adiciona margem nas laterais */
+      width: 90%; /* Largura ajustada */
+      box-shadow: 0px 1px 2px #00000033; /* Sombra sutil para dar profundidade */
+    }
+    
+    .fa-chevron-down {
+      font-size: 10px;
+      margin-left: 5px;
+    }
+    
+    @media (max-width: 768px) {
+      
+      .footer-section {
+        margin-bottom: 10px; /* Adiciona margem abaixo de cada seção do rodapé */
+        padding: 5px; /* Adiciona um pouco de espaço interno para cada seção */
+      }
+
+      /* Estilos específicos para dispositivos móveis */
+      .base {
+        padding-bottom: 60px; /* Reduzir o espaço para o rodapé em dispositivos móveis */
+      }
+
+      .divider {
+        display: none; /* Oculta a barra divisória em dispositivos móveis */
+      }
+
+      footer {
+        padding: 10px 0; /* Reduzir o padding do rodapé */
+      }
+
+      .footer-section h5 {
+        font-size: 10px; /* Reduzir o tamanho da fonte */
+      }
+
+      .footer-section ul li {
+        display: block; /* Itens da lista em bloco (um abaixo do outro) */
+        margin: 2px 0; /* Reduzir a margem entre itens da lista */
+        font-size: 12px;
+      }
+
+      .footer-section ul {
+        padding-left: 0; /* Remove o padding à esquerda para alinhar corretamente os itens da lista */
+      }
+
+      .social-icons a {
+        font-size: 14px; /* Reduzir o tamanho dos ícones */
+      }
+    }
+    .navbar-custom {
+    background-color: #333; /* Cor de fundo do navbar */
+  }
+  /* Especificidade aumentada para garantir aplicação dos estilos */
+  .navbar .btn-custom {
+    background-color: #007bff; /* Cor de fundo dos botões Entrar e Assine agora */
+    color: white;
+    border-radius: 20px; /* Borda arredondada para os botões */
+    border: none; /* Remover borda padrão */
+    outline: none; /* Remover contorno ao focar */
+    margin-right: 10px; /* Espaçamento à direita dos botões */
+  }
+
+  .user-icon {
+    color: white;
+    font-size: 24px; /* Tamanho do ícone */
+  }
+  </style>
+
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body class="base">
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <a class="navbar-brand" href="#">
+          <img src="{% static 'img/logo.png' %}" width="50" height="50" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">INÍCIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'treinos' %}">TREINOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'desafios' %}">DESAFIOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'receitas' %}">RECEITAS</a>
+            </li>
+          </ul>
+          <div class="form-inline">
+            <button class="btn btn-custom my-2 my-sm-0" type="button">Entrar</button>
+            <button class="btn btn-custom my-2 my-sm-0 ml-2" type="button">Assine agora</button>
+             <!-- Ícone de usuário usando Font Awesome -->
+             <i class="fas fa-user user-icon"></i>
+          </div>
+        </div>
+      </nav>
+
+
+{% block content %}
+{% endblock %}
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section dúvidas-frequentes">
+        <h5>Dúvidas Frequentes</h5>
+        <ul class="list-inline"> <!-- List-inline para alinhar horizontalmente -->
+          <li class="list-inline-item"><a href="#">Como funciona?<i class="fas fa-chevron-down"></i></a></li>
+          <li class="list-inline-item"><a href="#">Como faço um cadastro?<i class="fas fa-chevron-down"></i></a></li>
+          <li class="list-inline-item"><a href="#">Onde encontro os treinos?<i class="fas fa-chevron-down"></i></a></li>
+          <li class="list-inline-item"><a href="#">Como faço os desafios?<i class="fas fa-chevron-down"></i></a></li>
+          <li class="list-inline-item"><a href="#">Qual a melhor receita?<i class="fas fa-chevron-down"></i></a></li>
+          <li class="list-inline-item"><a href="#">Como aproveito a ferramenta?<i class="fas fa-chevron-down"></i></a></li>
+        </ul>
+        <div class="divider"></div>
+      </div>
+      <div class="footer-section menu">
+        <h5>Menu</h5>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Início</a></li>
+          <li class="list-inline-item"><a href="#">Entrar</a></li>
+        </ul>
+      </div>
+      <div class="footer-section explorar">
+        <h5>Explorar</h5>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Treinos</a></li>
+          <li class="list-inline-item"><a href="#">Desafios</a></li>
+          <li class="list-inline-item"><a href="#">Receitas</a></li>
+        </ul>
+      </div>      
+      <div class="footer-section social-icons">
+        <h5>Redes Sociais</h5>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+   
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
